@@ -1,6 +1,7 @@
 import csv
 
 
+
 with open("boyName.csv","w", encoding = "utf-8") as csvfile:
     fieldnames = ['First Name', 'Count']
     csv_writer = csv.DictWriter(csvfile,fieldnames=fieldnames,delimiter = ",")
@@ -43,6 +44,16 @@ def generateDictionary():
             v = line.split(' ')[0]
             dict_temp[k] = v
     print(dict_temp)
+
+
+dispalyCharacter = input("Please enter the character from font3.txt")
+
+with open('font3.txt', 'rb') as bfile:
+    bfile = bfile.read()
+    binarray = ' '.join(format(ch, 'b') for ch in bytearray(bfile))
+    print(binarray)
+
+
 
 
 
