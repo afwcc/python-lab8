@@ -1,9 +1,3 @@
-
-
-
-
-
-
 def generateDictionary():
     dict_temp = {}
     with open('font3.txt', 'r') as file:
@@ -13,3 +7,5 @@ def generateDictionary():
             v = line.split(' ')[0]
             dict_temp[k] = v
     print(dict_temp)
+
+generateDictionary()
